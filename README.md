@@ -1,26 +1,23 @@
-# Simulação de Órbita - Método de Verlet
+# Orbit Simulation - Verlet Method
 
-## Descrição
-Este projeto simula o movimento de um corpo em órbita ao redor de uma estrela, usando uma abordagem física baseada nas leis da gravitação de Newton.
+## Description
+This project simulates the motion of a body orbiting a star, using a physics-based approach grounded in Newton's law of gravitation.
 
-Inicialmente, foi implementado um método simples de integração numérica, o **método de Euler**, mas após perceber os erros acumulativos no cálculo da posição e velocidade do corpo, o algoritmo foi alterado para o **método de Verlet**, que é mais estável para esse tipo de simulação.
+Initially, a simple numerical integration method, the **Euler method**, was implemented. However, after noticing cumulative errors in the calculation of the body’s position and velocity, the algorithm was switched to the **Verlet method**, which is more stable for this type of simulation.
 
-## Objetivo
-O objetivo principal do projeto é simular a órbita de um corpo ao redor de uma estrela e observar as mudanças nas trajetórias dependendo dos parâmetros físicos.
+## Objective
+The main goal of this project is to simulate the orbit of a body around a star and observe how the trajectories change depending on physical parameters.
 
-## Como funciona?
-1. O código usa a biblioteca **pygame** para renderizar a simulação em tempo real.
-2. As forças gravitacionais entre a estrela e o corpo são calculadas com base na Lei da Gravitação Universal de Newton.
-3. A aceleração do corpo é calculada a partir da força e da massa do corpo.
-4. A posição do corpo é atualizada usando o **método de Verlet**, que é uma forma eficiente de integrar o movimento sem acumular erros de arredondamento significativos.
+## How it works?
+1. The code uses the **pygame** library to render the simulation in real-time.
+2. The gravitational forces between the star and the body are calculated based on Newton’s Universal Law of Gravitation.
+3. The body’s acceleration is calculated from the force and the body’s mass.
+4. The body’s position is updated using the **Verlet method**, which is an efficient way of integrating motion without accumulating significant rounding errors.
 
-## Método de Euler vs. Método de Verlet
+## Euler Method vs. Verlet Method
 
-### Método de Euler (Inicial):
-O método de Euler foi o primeiro escolhido para a simulação, pois é um método simples e intuitivo. No entanto, o método de Euler apresenta **erros acumulativos** que afetam a precisão das simulações, especialmente em sistemas com movimentos complexos e de longo prazo. Como o método usa aproximações de primeira ordem para a posição e velocidade, os erros podem crescer rapidamente, fazendo com que a órbita se distorça ao longo do tempo.
+### Euler Method (Initial):
+The Euler method was the first chosen for the simulation because it is simple and intuitive. However, the Euler method has **cumulative errors** that affect the accuracy of simulations, especially in systems with complex and long-term motions. Since the method uses first-order approximations for position and velocity, the errors can grow rapidly, causing the orbit to distort over time.
 
-### Método de Verlet (Atual):
-O método de Verlet foi adotado após os problemas com o método de Euler. Ele oferece uma solução mais estável, sem acumular erros de maneira tão significativa. O método de Verlet é particularmente adequado para simulações de partículas sob forças conservativas (como a gravitação), porque ele calcula a posição com base nas posições anteriores e atuais, sendo mais preciso em simulações com grandes intervalos de tempo.
-
-
-
+### Verlet Method (Current):
+The Verlet method was adopted after the problems with the Euler method. It provides a more stable solution, without accumulating errors as significantly. The Verlet method is particularly suitable for simulating particles under conservative forces (such as gravity) because it calculates the position based on previous and current positions, making it more accurate for simulations with large time intervals.
